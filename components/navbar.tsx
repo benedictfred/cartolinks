@@ -54,8 +54,8 @@ export default function Navbar() {
   const [navActive, setNavActive] = useState("Home");
   return (
     <nav className="flex items-center justify-between px-4 py-3">
-      <div className="flex items-center gap-4">
-        <KreaLogo />
+      <div className="flex items-center gap-7">
+        <KreaLogo className="w-7 h-7" />
         <div className="flex items-center gap-1">
           <span className="bg-gradient-to-br from-[#D299E6] from-10% via-[#8E9BEF] via-50% to-[#AFCAF9] to-100% rounded-full w-7 h-7"></span>
           <span>benevolentnimblebat</span>
@@ -80,20 +80,23 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="flex gap-4 items-center">
-        <div className="flex items-center gap-1 bg-gray-subtle py-2 px-3 rounded-lg">
-          <Images />
+        <div className="flex items-center gap-1 bg-gray-subtle py-2 px-3 rounded-lg text-sm">
+          <Images className="w-5 h-5" />
           <span>Gallery</span>
         </div>
-        <div className="flex items-center gap-1 bg-gray-subtle py-2 px-3 rounded-lg">
-          <Headset />
+        <div className="flex items-center gap-1 bg-gray-subtle py-2 px-3 rounded-lg text-sm">
+          <Headset className="w-5 h-5" />
           <span>Support</span>
         </div>
         <div className="bg-gray-subtle p-2 rounded-lg">
-          <Bell />
+          <Bell className="w-5 h-5" />
         </div>
-        <div className="bg-gray-subtle p-2 rounded-lg" onClick={toggleTheme}>
+        <button
+          className="bg-gray-subtle p-2 rounded-lg cursor-pointer *:w-5 *:h-5"
+          onClick={toggleTheme}
+        >
           {theme === "dark" ? <Sun /> : <Moon />}
-        </div>
+        </button>
         <div className="bg-gradient-to-br from-[#D299E6] from-10% via-[#8E9BEF] via-50% to-[#AFCAF9] to-100% rounded-full w-10 h-10"></div>
       </div>
     </nav>

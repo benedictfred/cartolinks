@@ -131,7 +131,7 @@ export default function GenerateSection() {
               </div>
             </div>
 
-            <button className="ml-6 bg-[#F6F6F6] text-black text-sm font-medium py-2 px-4 rounded-full transition-colors duration-200">
+            <button className="ml-6 bg-gray-subtle text-primary-text text-sm font-medium py-2 px-4 rounded-full transition-colors duration-200 cursor-pointer">
               {tool.buttonText}
             </button>
           </div>
